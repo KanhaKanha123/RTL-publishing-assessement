@@ -1,5 +1,5 @@
 export type BundlesProps = {
-    id:number,
+    id: number,
     afbeelding: string,
     urlAlias: string,
     labelValue: string,

@@ -1,11 +1,12 @@
 import { useEffect, useReducer, useRef, useState } from 'react';
-import { InitialState, articleReducer } from '../store/reducers/ArticleReducer';
-import { getFetchApi } from './api/api';
+import { formatData } from '../helpers/formatData';
+import { InitialState, articleReducer } from '../store/reducers/articleReducer';
+import { getFetchApi } from './services/fetchData';
 
 //custom hook to manage api call to get data
-const useGetData = () => {
+const useFetchData = () => {
     const [state, dispatch] = useReducer(articleReducer, InitialState);
-    const [apiUrl, setApiUrl] = useState("");
+    const [apiUrl, setApiUrl] = useState("bundle-api.json");
 
     let firstUpdate = useRef<Boolean>(false);
 
@@ -16,26 +17,6 @@ const useGetData = () => {
         }).catch(err => {
             dispatch({ type: "DATA_ERROR", payload: err });
         });
-    };
-
-    //format data, just keep neccessary fields from big object
-    const formatData = (articleRawData: any) => {
-        const neccessaryDataMaped = articleRawData.bundelItems.map((item: any) => ({
-            afbeelding: item.afbeelding.afbeelding,
-            urlAlias: item.urlAlias,
-            labelValue: item.labelValue,
-            title: item.title,
-            lead: item.lead,
-            formatted: item.aangemaaktDatum.formatted
-        }));
-
-        return {
-            title: articleRawData.title,
-            label: articleRawData.label,
-            description: articleRawData.description,
-            image: articleRawData.image.imageUrl,
-            bundelItems: neccessaryDataMaped
-        }
     };
 
     useEffect(() => {
@@ -53,4 +34,4 @@ const useGetData = () => {
     return { state, setApiUrl };
 }
 
-export default useGetData;
+export default useFetchData;

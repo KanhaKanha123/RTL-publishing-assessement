@@ -1,21 +1,15 @@
 import ArticlesListHorizontal from "../articles/ArticlesListHorizontal";
 import ArticlesListVerticle from "../articles/ArticlesListVerticle";
-import useGetData from '../../hooks/useGetData';
+import useFetchData from '../../hooks/useFetchData';
 import Banner from "../banner/Banner";
 import ErrorBoundary from "../../error-boundries/ErrorBoundry";
-import { useRef } from "react";
 
 const Home = () => {
-    let callOnce = useRef<Boolean>(false);
-    const {state:{articleData, error, loading},setApiUrl} = useGetData();
+
+    //fetch api data by using custom hook
+    const {state:{articleData, error, loading}} = useFetchData();
 
     const { bundelItems } = articleData;
-
-    if (!callOnce.current) {
-        setApiUrl('bundle-api.json');
-    }
-    
-    callOnce.current = true;
 
     return (<>
         {loading && <span>Loading.......</span>}

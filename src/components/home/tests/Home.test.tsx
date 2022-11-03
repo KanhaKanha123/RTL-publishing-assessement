@@ -1,7 +1,7 @@
 import Home from '../Home';
 import { renderHook, waitFor, screen, render } from '@testing-library/react';
 import renderer, { act } from 'react-test-renderer';
-import useGetData from '../../../hooks/useGetData';
+import useFetchData from '../../../hooks/useFetchData';
 
 describe('Home component component test', () => {
 
@@ -13,7 +13,7 @@ describe('Home component component test', () => {
 
     test("Home component load correctly and called the fetch api", async () => {
         act(() => { render(<Home />) });
-        renderHook(async () => { await act(() => { useGetData() }) });
+        renderHook(async () => { await act(() => { useFetchData() }) });
 
         waitFor(() => {
             const homePage = screen.getByTestId("home-page");
