@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner component test Banner component should match snapshot 1`] = `
+<div
+  className="banner-wrapper"
+  data-testid="banner-wrapper-div"
+>
+  <img
+    data-testid="banner-image"
+    src="https://www.rtlboulevard.nl/sites/default/files/content/images/2018/12/27/thumbnail_Jaaroverzicht%20Banner.jpg"
+  />
+  <span
+    className="title"
+    data-testid="banner-label"
+  >
+    best gelezen
+  </span>
+  <h1
+    className="bannerTitle"
+    data-testid="banner-title"
+  >
+    De uitschieters van 2018
+  </h1>
+  <span
+    data-testid="banner-description"
+  >
+    Waar hadden we.
+  </span>
+</div>
+`;

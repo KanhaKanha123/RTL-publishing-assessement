@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticlesListVerticle component test ArticlesListVerticle component should match snapshot 1`] = `
+<div
+  className="verticle-articles"
+  data-testid="verticleArticles-wrapper"
+>
+  <a
+    className="zoom"
+    data-testid="horizontalLayout-a"
+    href="https://www.rtlboulevard.nl/entertainment/showbizz/artikel/4245471/trijntje-oosterhuis-onherkenbaar-veel-afgevallen"
+    target="_blank"
+  >
+    <div
+      className="article-horizontal-layout"
+      data-testid="horizontalLayout-wrapper"
+    >
+      <img
+        alt="De uitschieters van 2018"
+        className="card-img-top"
+        data-testid="horizontalLayout-img"
+        src="https://www.rtlboulevard.nl/sites/default/files/content/images/2018/06/19/ANP-56919532.jpg"
+        style={
+          Object {
+            "width": "30%",
+          }
+        }
+      />
+      <div
+        className="right-content-div"
+        data-testid="horizontalLayout-rightContentDiv"
+      >
+        <div
+          className="label card-title h5"
+          data-testid="horizontalLayout-label-title"
+        >
+          De uitschieters van 2018
+        </div>
+        <div
+          className="label card-title h5"
+          data-testid="horizontalLayout-label-date"
+        >
+          19 juni 2018
+        </div>
+        <span
+          className="layout-bold-title"
+          data-testid="horizontalLayout-layoutBoldTitle"
+        >
+          Trijntje
+        </span>
+        <span
+          className="lead"
+          data-testid="horizontalLayout-lead"
+        >
+          Humberto Tan
+        </span>
+      </div>
+    </div>
+  </a>
+  <a
+    className="zoom"
+    data-testid="horizontalLayout-a"
+    href="https://www.rtlboulevard.nl/entertainment/showbizz/artikel/4245471/trijntje-oosterhuis-onherkenbaar-veel-afgevallen"
+    target="_blank"
+  >
+    <div
+      className="article-horizontal-layout"
+      data-testid="horizontalLayout-wrapper"
+    >
+      <img
+        alt="De uitschieters van 2018"
+        className="card-img-top"
+        data-testid="horizontalLayout-img"
+        src="https://www.rtlboulevard.nl/sites/default/files/content/images/2018/06/19/ANP-56919532.jpg"
+        style={
+          Object {
+            "width": "30%",
+          }
+        }
+      />
+      <div
+        className="right-content-div"
+        data-testid="horizontalLayout-rightContentDiv"
+      >
+        <div
+          className="label card-title h5"
+          data-testid="horizontalLayout-label-title"
+        >
+          De uitschieters van 2018
+        </div>
+        <div
+          className="label card-title h5"
+          data-testid="horizontalLayout-label-date"
+        >
+          19 juni 2018
+        </div>
+        <span
+          className="layout-bold-title"
+          data-testid="horizontalLayout-layoutBoldTitle"
+        >
+          Trijntje
+        </span>
+        <span
+          className="lead"
+          data-testid="horizontalLayout-lead"
+        >
+          Humberto Tan
+        </span>
+      </div>
+    </div>
+  </a>
+</div>
+`;

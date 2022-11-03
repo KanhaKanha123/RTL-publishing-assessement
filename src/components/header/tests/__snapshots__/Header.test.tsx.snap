@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component test Header component should match snapshot 1`] = `
+<nav
+  className="header navbar navbar-expand navbar-light"
+  data-testid="header-wrapper-div"
+>
+  <div
+    className="container"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        RTL News
+      </a>
+    </span>
+    <div
+      className="navbar-nav"
+      onKeyDown={[Function]}
+    >
+      <div
+        className="dropdown"
+      >
+        <button
+          aria-expanded={false}
+          className="dropdown-toggle btn btn-success"
+          disabled={false}
+          id="react-aria3253553911-2"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="badge bg-inherit"
+          >
+            Login
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

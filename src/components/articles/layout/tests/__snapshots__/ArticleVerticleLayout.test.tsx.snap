@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleVerticleLayout component test ArticleVerticleLayout should match the snapshot 1`] = `
+<div
+  className="article-verticle-layout"
+  data-testid="article-verticle-layout-wrapper"
+>
+  <div
+    className="card"
+  >
+    <a
+      className="zoom"
+      data-testid="verticleLayout-a"
+      href="https://www.rtlboulevard.nl/entertainment/showbizz/artikel/4245471/trijntje-oosterhuis-onherkenbaar-veel-afgevallen"
+      target="_blank"
+    >
+      <img
+        alt="De uitschieters van 2018"
+        className="card-img-top"
+        data-testid="verticleLayout-img"
+        src="https://www.rtlboulevard.nl/sites/default/files/content/images/2018/06/19/ANP-56919532.jpg"
+        style={
+          Object {
+            "height": "250px",
+          }
+        }
+      />
+    </a>
+    <div
+      className="label card-title h5"
+      data-testid="verticleLayout-label-title"
+    >
+      De uitschieters van 2018
+    </div>
+    <div
+      className="label card-title h5"
+      data-testid="verticleLayout-label-date"
+    >
+      19 juni 2018
+    </div>
+    <span
+      className="layout-bold-title"
+      data-testid="verticleLayout-layoutBoldTitle"
+    >
+      Trijntje
+    </span>
+    <span
+      className="lead"
+      data-testid="verticleLayout-lead"
+    >
+      Humberto Tan
+      ...
+    </span>
+  </div>
+</div>
+`;

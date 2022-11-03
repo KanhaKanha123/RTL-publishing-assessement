@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component component test Home component should match snapshot 1`] = `
+Array [
+  <span>
+    Loading.......
+  </span>,
+  <div
+    className="home"
+    data-testid="home-page"
+  >
+    <div
+      className="banner-wrapper"
+      data-testid="banner-wrapper-div"
+    >
+      <img
+        data-testid="banner-image"
+      />
+      <span
+        className="title"
+        data-testid="banner-label"
+      />
+      <h1
+        className="bannerTitle"
+        data-testid="banner-title"
+      />
+      <span
+        data-testid="banner-description"
+      />
+    </div>
+  </div>,
+]
+`;
