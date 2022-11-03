@@ -1,17 +1,17 @@
-import { useEffect, useReducer, useRef } from 'react';
+import { useEffect, useReducer, useRef, useState } from 'react';
 import { InitialState, articleReducer } from '../store/reducers/ArticleReducer';
 import { getFetchApi } from './api/api';
 
 //custom hook to manage api call to get data
 const useGetData = () => {
-    const [state, dispatch] = useReducer(articleReducer, InitialState)
+    const [state, dispatch] = useReducer(articleReducer, InitialState);
+    const [apiUrl, setApiUrl] = useState("");
 
-    let calledOnce = useRef<Boolean>(false);
+    let firstUpdate = useRef<Boolean>(false);
 
-    const getData = async () => {
+    const getData = async (apiUrl: string) => {
         //with axios test runner was having some issues so i use fetch here
-        getFetchApi().then(res => {
-            console.log(res)
+        getFetchApi(apiUrl).then(res => res.json()).then(res => {
             dispatch({ type: "DATA_SUCCESS", payload: formatData(res) });
         }).catch(err => {
             dispatch({ type: "DATA_ERROR", payload: err });
@@ -41,16 +41,16 @@ const useGetData = () => {
     useEffect(() => {
         try {
             //react 18 re mount the component, so to call only once maintating by useref
-            if (!calledOnce.current) {
-                getData();
+            if (!firstUpdate.current) {
+                getData(apiUrl);
             }
-            calledOnce.current = true;
+            firstUpdate.current = true;
         } catch (err) {
             console.error(err);
         }
-    }, []);
+    }, [apiUrl]);
 
-    return [state];
+    return { state, setApiUrl };
 }
 
 export default useGetData;

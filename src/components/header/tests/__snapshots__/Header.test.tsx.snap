@@ -12,6 +12,8 @@ exports[`Header component test Header component should match snapshot 1`] = `
       className="navbar-brand"
     >
       <a
+        className="headerText"
+        data-testid="header-anchor"
         href="/"
         onClick={[Function]}
       >
@@ -25,20 +27,12 @@ exports[`Header component test Header component should match snapshot 1`] = `
       <div
         className="dropdown"
       >
-        <button
-          aria-expanded={false}
-          className="dropdown-toggle btn btn-success"
-          disabled={false}
-          id="react-aria3253553911-2"
-          onClick={[Function]}
-          type="button"
+        <span
+          className="headerText badge bg-inherit"
+          data-testid="header-login"
         >
-          <span
-            className="badge bg-inherit"
-          >
-            Login
-          </span>
-        </button>
+          Login
+        </span>
       </div>
     </div>
   </div>

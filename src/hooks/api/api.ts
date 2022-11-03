@@ -1,10 +1,6 @@
-export const getFetchApi = async () => {
+export const getFetchApi = async (apiUrl:string) => {
     //with axios test runner was having some issues so i use fetch here
-    return fetch('bundle-api.json').then(res => {
-        if (res.status === 200) {
-            return res.json();
-        } else {
-            throw new Error("Invalid response");
-        }
-    });
+    const response= fetch(apiUrl);
+
+    return response;
 };

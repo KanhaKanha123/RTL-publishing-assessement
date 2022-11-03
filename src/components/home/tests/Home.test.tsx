@@ -1,7 +1,7 @@
 import Home from '../Home';
 import { renderHook, waitFor, screen, render } from '@testing-library/react';
 import renderer, { act } from 'react-test-renderer';
-import useGetData from '../../hooks/useGetData';
+import useGetData from '../../../hooks/useGetData';
 
 describe('Home component component test', () => {
 

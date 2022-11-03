@@ -4,6 +4,11 @@ a {
   color: inherit !important;
 }
 
+.headerText{
+  color: white!important;
+  font-weight: bold;
+}
+
 .zoom {
   padding: 0px;
   transition: transform .2s;

@@ -98,7 +98,7 @@ exports[`ArticlesListHorizontal component test ArticlesListHorizontal component 
         className="layout-bold-title"
         data-testid="verticleLayout-layoutBoldTitle"
       >
-        Trijntje
+        Trijntje2
       </span>
       <span
         className="lead"
