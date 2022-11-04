@@ -1,5 +1,6 @@
 import ArticleVerticleLayout from "./layout/ArticleVerticleLayout";
 import { BundlesProps } from "../../types/types";
+import ErrorBoundary from "../../error-boundries/ErrorBoundry";
 
 type ArticlesListHorizontalProps = {
     bundles: BundlesProps[];
@@ -7,7 +8,7 @@ type ArticlesListHorizontalProps = {
 
 const ArticlesListHorizontal = ({ bundles }: ArticlesListHorizontalProps) => {
     return (<div data-testid="horizontalArticles-wrapper" className="horizontal-articles">
-        {(bundles || []).map((article: any) => (<ArticleVerticleLayout data-testid="articleVerticleLayout-component" key={article.title} bundle={article}></ArticleVerticleLayout>))}
+        {(bundles || []).map((article: BundlesProps) => (<ErrorBoundary key={Math.random()*10}><ArticleVerticleLayout data-testid="articleVerticleLayout-component" key={Math.random()*10} bundle={article}></ArticleVerticleLayout></ErrorBoundary>))}
     </div>)
 };
 
