@@ -16,3 +16,19 @@ export type ArticleProps = {
         image: string
     }
 };
+
+export type ArticlesListVerticleProps = {
+    bundles: BundlesProps[];
+};
+
+export type ArticlesListHorizontalProps = {
+    bundles: BundlesProps[];
+};
+
+export type ArticleHorizontalLayoutProps = {
+    bundle: BundlesProps
+}
+
+export type ArticleVerticleLayoutProps = {
+    bundle: BundlesProps
+}

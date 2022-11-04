@@ -1,9 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { BundlesProps } from "../../../types/types";
-
-type ArticleVerticleLayoutProps = {
-    bundle: BundlesProps
-}
+import { ArticleVerticleLayoutProps, BundlesProps } from "../../../types/types";
 
 const ArticleVerticleLayout = ({ bundle: { afbeelding, urlAlias, labelValue, title, lead, formatted } }: ArticleVerticleLayoutProps) => {
     return (
